@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Compare The Wandering Bean vs Impulse Coffees - Discover which premium flavored instant coffee brand is right for you">
+    <title>The Wandering Bean vs Impulse Coffees: Which is Right for You?</title>
+    <style>
+        :root {
+            /* Color Palette */
+            --primary-color: #8B4513;
+            --primary-hover-color: #6B3410;
+            --secondary-color: #D2691E;
+            --accent-color: #FF8C42;
+            --accent-hover-color: #E67A35;
+            --heading-color: #2C1810;
+            --text-color: #4A3428;
+            --text-color-light: #8B7355;
+            --background-color: #FFF9F5;
+            --surface-color: #FFFFFF;
+            --border-color: #E8D5C4;
+            --success-color: #4CAF50;
+            --error-color: #E74C3C;
+            --warning-color: #F39C12;
+            
+            /* Typography */
+            --font-primary: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            --font-secondary: Georgia, 'Times New Roman', serif;
+            --base-font-size: 16px;
+            --font-weight-normal: 400;
+            --font-weight-bold: 700;
+            --line-height-base: 1.7;
+            --line-height-heading: 1.3;
+            --h1-font-size: clamp(2rem, 5vw, 3rem);
+            --h2-font-size: clamp(1.75rem, 4vw, 2.5rem);
+            --h3-font-size: clamp(1.5rem, 3vw, 2rem);
+            --h4-font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+            --h5-font-size: clamp(1.125rem, 2vw, 1.5rem);
+            --h6-font-size: clamp(1rem, 1.5vw, 1.25rem);
+            
+            /* Sizing and Spacing */
+            --header-height: 80px;
+            --container-width: 1200px;
+            --spacing-unit: 1rem;
+            --border-radius: 12px;
+            
+            /* Effects and Transitions */
+            --shadow-sm: 0 2px 4px rgba(0,0,0,0.1);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.15);
+            --shadow-lg: 0 8px 24px rgba(0,0,0,0.2);
+            --transition-speed: 0.3s;
+            --transition-timing: ease-in-out;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: var(--font-primary);
+            font-size: var(--base-font-size);
+            line-height: var(--line-height-base);
+            color: var(--text-color);
+            background-color: var(--background-color);
+            font-weight: var(--font-weight-normal);
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-secondary);
+            color: var(--heading-color);
+            line-height: var(--line-height-heading);
+            font-weight: var(--font-weight-bold);
+            margin-bottom: calc(var(--spacing-unit) * 1.5);
+        }
+        
+        h1 { font-size: var(--h1-font-size); }
+        h2 { font-size: var(--h2-font-size); }
+        h3 { font-size: var(--h3-font-size); }
+        h4 { font-size: var(--h4-font-size); }
+        h5 { font-size: var(--h5-font-size); }
+        h6 { font-size: var(--h6-font-size); }
+        
+        p, div:not(.cta-button):not(.header):not(.nav-links):not(.icon-wrapper) {
+            text-align: justify;
+            margin-bottom: var(--spacing-unit);
+        }
+        
+        a {
+            color: var(--primary-color);
+            text-decoration: underline;
+            transition: color var(--transition-speed) var(--transition-timing);
+        }
+        
+        a:hover {
+            color: var(--primary-hover-color);
+        }
+        
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 calc(var(--spacing-unit) * 2);
+        }
+        
+        /* Header Navigation */
+        header {
+            position: sticky;
+            top: 0;
+            background-color: var(--surface-color);
+            box-shadow: var(--shadow-sm);
+            z-index: 1000;
+            height: var(--header-height);
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+        }
+        
+        .logo {
+            height: 50px;
+            width: auto;
+            object-fit: contain;
+        }
+        
+        .nav-cta {
+            display: inline-block;
+            padding: calc(var(--spacing-unit) * 0.75) calc(var(--spacing-unit) * 2);
+            background-color: var(--accent-color);
+            color: var(--surface-color);
+            text-decoration: none;
+            border-radius: var(--border-radius);
+            font-weight: var(--font-weight-bold);
+            transition: all var(--transition-speed) var(--transition-timing);
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .nav-cta:hover {
+            background-color: var(--accent-hover-color);
+            box-shadow: var(--shadow-md);
+            transform: translateY(-2px);
+            color: var(--surface-color);
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: calc(var(--spacing-unit) * 4) 0;
+            background: linear-gradient(135deg, var(--surface-color) 0%, var(--background-color) 100%);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s var(--transition-timing), transform 0.6s var(--transition-timing);
+        }
+        
+        .hero.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .hero-content {
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
+            margin-bottom: calc(var(--spacing-unit) * 2);
+        }
+        
+        .hero-description {
+            font-size: 1.125rem;
+            color: var(--text-color-light);
+            margin-bottom: calc(var(--spacing-unit) * 3);
+        }
+        
+        .hero-cta {
+            display: inline-block;
+            padding: calc(var(--spacing-unit) * 1) calc(var(--spacing-unit) * 3);
+            background-color: var(--primary-color);
+            color: var(--surface-color);
+            text-decoration: none;
+            border-radius: var(--border-radius);
+            font-weight: var(--font-weight-bold);
+            font-size: 1.125rem;
+            transition: all var(--transition-speed) var(--transition-timing);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .hero-cta:hover {
+            background-color: var(--primary-hover-color);
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-3px);
+            color: var(--surface-color);
+        }
+        
+        /* Comparison Section */
+        .comparison-section {
+            padding: calc(var(--spacing-unit) * 5) 0;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s var(--transition-timing), transform 0.6s var(--transition-timing);
+        }
+        
+        .comparison-section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: calc(var(--spacing-unit) * 4);
+        }
+        
+        /* Mobile Accordion */
+        .mobile-accordion {
+            display: block;
+        }
+        
+        .accordion-item {
+            background-color: var(--surface-color);
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            margin-bottom: calc(var(--spacing-unit) * 1.5);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .accordion-header {
+            padding: calc(var(--spacing-unit) * 1.5);
+            background-color: var(--background-color);
+            border-bottom: 1px solid var(--border-color);
+            font-weight: var(--font-weight-bold);
+            color: var(--heading-color);
+            font-size: 1.125rem;
+        }
+        
+        .accordion-content {
+            padding: calc(var(--spacing-unit) * 1.5);
+        }
+        
+        .brand-comparison {
+            display: flex;
+            flex-direction: column;
+            gap: calc(var(--spacing-unit) * 1.5);
+        }
+        
+        .brand-item {
+            padding: calc(var(--spacing-unit) * 1.25);
+            background-color: var(--background-color);
+            border-radius: calc(var(--border-radius) * 0.5);
+        }
+        
+        .brand-name {
+            font-weight: var(--font-weight-bold);
+            color: var(--primary-color);
+            margin-bottom: calc(var(--spacing-unit) * 0.5);
+            display: flex;
+            align-items: center;
+            gap: calc(var(--spacing-unit) * 0.5);
+        }
+        
+        .brand-value {
+            color: var(--text-color);
+        }
+        
+        .icon {
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+        }
+        
+        .check-icon {
+            color: var(--success-color);
+        }
+        
+        .x-icon {
+            color: var(--error-color);
+        }
+        
+        /* Desktop Table */
+        .desktop-table {
+            display: none;
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            background-color: var(--surface-color);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+        }
+        
+        .desktop-table th,
+        .desktop-table td {
+            padding: calc(var(--spacing-unit) * 1.5);
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .desktop-table th {
+            background-color: var(--primary-color);
+            color: var(--surface-color);
+            font-weight: var(--font-weight-bold);
+            text-align: center;
+        }
+        
+        .desktop-table td {
+            text-align: center;
+        }
+        
+        .desktop-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .desktop-table .feature-name {
+            text-align: left;
+            font-weight: var(--font-weight-bold);
+            background-color: var(--background-color);
+        }
+        
+        .desktop-table .brand-col {
+            background-color: rgba(139, 69, 19, 0.05);
+        }
+        
+        /* Consideration Section */
+        .consideration-section {
+            padding: calc(var(--spacing-unit) * 5) 0;
+            background-color: var(--surface-color);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s var(--transition-timing), transform 0.6s var(--transition-timing);
+        }
+        
+        .consideration-section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .consideration-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: calc(var(--spacing-unit) * 3);
+            margin-top: calc(var(--spacing-unit) * 3);
+        }
+        
+        .consideration-card {
+            background-color: var(--background-color);
+            padding: calc(var(--spacing-unit) * 3);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-md);
+            border-left: 4px solid var(--primary-color);
+        }
+        
+        .consideration-card h3 {
+            color: var(--primary-color);
+            margin-bottom: calc(var(--spacing-unit) * 1.5);
+        }
+        
+        /* Differentiator Section */
+        .differentiator-section {
+            padding: calc(var(--spacing-unit) * 5) 0;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s var(--transition-timing), transform 0.6s var(--transition-timing);
+        }
+        
+        .differentiator-section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .differentiator-content {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: var(--surface-color);
+            padding: calc(var(--spacing-unit) * 3);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .features-list {
+            list-style: none;
+            margin-top: calc(var(--spacing-unit) * 2);
+        }
+        
+        .features-list li {
+            padding: calc(var(--spacing-unit) * 1);
+            margin-bottom: calc(var(--spacing-unit) * 1);
+            display: flex;
+            align-items: flex-start;
+            gap: calc(var(--spacing-unit) * 1);
+        }
+        
+        .features-list li svg {
+            flex-shrink: 0;
+            margin-top: 4px;
+        }
+        
+        .cta-wrapper {
+            text-align: center;
+            margin-top: calc(var(--spacing-unit) * 3);
+        }
+        
+        .cta-large {
+            display: inline-block;
+            padding: calc(var(--spacing-unit) * 1.25) calc(var(--spacing-unit) * 3.5);
+            background-color: var(--accent-color);
+            color: var(--surface-color);
+            text-decoration: none;
+            border-radius: var(--border-radius);
+            font-weight: var(--font-weight-bold);
+            font-size: 1.25rem;
+            transition: all var(--transition-speed) var(--transition-timing);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .cta-large:hover {
+            background-color: var(--accent-hover-color);
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-3px);
+            color: var(--surface-color);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--heading-color);
+            color: var(--surface-color);
+            padding: calc(var(--spacing-unit) * 2) 0;
+            text-align: center;
+        }
+        
+        footer p {
+            margin: 0;
+            text-align: center;
+        }
+        
+        /* Responsive */
+        @media (min-width: 768px) {
+            .consideration-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            
+            .mobile-accordion {
+                display: none;
+            }
+            
+            .desktop-table {
+                display: table;
+            }
+        }
+        
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation: none !important;
+                transition: none !important;
+            }
+        }
+        
+        img {
+            object-fit: contain;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <img src="https://wanderingbean.in/cdn/shop/files/WB_Png_logo-1_220x.png?v=1644509396" alt="The Wandering Bean Logo" class="logo" loading="eager">
+            <a href="#collection_grid" class="nav-cta">Shop Now</a>
+        </nav>
+    </header>
+    
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>The Wandering Bean vs. Impulse Coffees: Which is Right for You?</h1>
+                    <p class="hero-description">Discover the differences between two of India's premium flavored instant coffee brands. We've analyzed the formats, flavors, pricing, and positioning to help you make an informed choice.</p>
+                    <a href="#collection_grid" class="hero-cta">Explore The Wandering Bean</a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Comparison Table Section -->
+        <section class="comparison-section">
+            <div class="container">
+                <h2 class="section-title">Head-to-Head Comparison</h2>
+                
+                <!-- Mobile Accordion -->
+                <div class="mobile-accordion">
+                    <div class="accordion-item">
+                        <div class="accordion-header">Product Formats</div>
+                        <div class="accordion-content">
+                            <div class="brand-comparison">
+                                <div class="brand-item">
+                                    <div class="brand-name">
+                                        <svg class="icon check-icon" role="img" aria-label="Available" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                        The Wandering Bean
+                                    </div>
+                                    <div class="brand-value">Instant, Ground, and Whole Beans</div>
+                                </div>
+                                <div class="brand-item">
+                                    <div class="brand-name">Impulse Coffees</div>
+                                    <div class="brand-value">Instant Only</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <div class="accordion-header">Flavor Range</div>
+                        <div class="accordion-content">
+                            <div class="brand-comparison">
+                                <div class="brand-item">
+                                    <div class="brand-name">
+                                        <svg class="icon check-icon" role="img" aria-label="Available" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                        The Wandering Bean
+                                    </div>
+                                    <div class="brand-value">19+ Flavors (Hazelnut, Caramel, Vanilla, Irish Cream, Filter Kaapi, and more)</div>
+                                </div>
+                                <div class="brand-item">
+                                    <div class="brand-name">Impulse Coffees</div>
+                                    <div class="brand-value">6 Flavors (Vanilla, Mocha, Hazelnut, Espresso, Rage Roast, Cinnamon)</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <div class="accordion-header">Pricing</div>
+                        <div class="accordion-content">
+                            <div class="brand-comparison">
+                                <div class="brand-item">
+                                    <div class="brand-name">
+                                        <svg class="icon check-icon" role="img" aria-label="Available" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                        The Wandering Bean
+                                    </div>
+                                    <div class="brand-value">₹200 (40g), ₹350 (60g)</div>
+                                </div>
+                                <div class="brand-item">
+                                    <div class="brand-name">Impulse Coffees</div>
+                                    <div class="brand-value">₹399 (100g)</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <div class="accordion-header">Availability</div>
+                        <div class="accordion-content">
+                            <div class="brand-comparison">
+                                <div class="brand-item">
+                                    <div class="brand-name">
+                                        <svg class="icon check-icon" role="img" aria-label="Available" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                        The Wandering Bean
+                                    </div>
+                                    <div class="brand-value">Pan-India Shipping with Combo Options</div>
+                                </div>
+                                <div class="brand-item">
+                                    <div class="brand-name">Impulse Coffees</div>
+                                    <div class="brand-value">Pan-India Shipping, No Offline Retail</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <div class="accordion-header">Brand Positioning</div>
+                        <div class="accordion-content">
+                            <div class="brand-comparison">
+                                <div class="brand-item">
+                                    <div class="brand-name">
+                                        <svg class="icon check-icon" role="img" aria-label="Available" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                        The Wandering Bean
+                                    </div>
+                                    <div class="brand-value">Bold, Flavor-Rich, Indian-Crafted Gourmet Coffee</div>
+                                </div>
+                                <div class="brand-item">
+                                    <div class="brand-name">Impulse Coffees</div>
+                                    <div class="brand-value">Creator-Led, Feminine, Premium DTC Aesthetic</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Desktop Table -->
+                <table class="desktop-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>The Wandering Bean</th>
+                            <th>Impulse Coffees</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="feature-name">Product Formats</td>
+                            <td class="brand-col">Instant, Ground, and Whole Beans</td>
+                            <td>Instant Only</td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">Flavor Range</td>
+                            <td class="brand-col">19+ Flavors</td>
+                            <td>6 Flavors</td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">Pricing (per 100g equivalent)</td>
+                            <td class="brand-col">₹333 - ₹500</td>
+                            <td>₹399</td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">Availability</td>
+                            <td class="brand-col">Pan-India with Combo Options</td>
+                            <td>Pan-India, Online Only</td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">Brand Positioning</td>
+                            <td class="brand-col">Bold, Flavor-Rich, Indian-Crafted</td>
+                            <td>Creator-Led, Premium DTC</td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">Certifications/Sourcing Info</td>
+                            <td class="brand-col">Not Specified</td>
+                            <td>Not Specified</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        
+        <!-- What to Consider Section -->
+        <section class="consideration-section">
+            <div class="container">
+                <h2 class="section-title">What to Consider</h2>
+                <div class="consideration-grid">
+                    <div class="consideration-card">
+                        <h3>Choose The Wandering Bean if...</h3>
+                        <p>You value versatility and want more than just instant coffee. The Wandering Bean offers the most comprehensive product range with instant, ground, and whole bean options, making it ideal for coffee enthusiasts who appreciate different brewing methods. With 19+ unique flavors ranging from classic French Vanilla and Creamy Caramel to innovative options like Earthy Ginger and Virgin Whiskey, there's something for every palate. The competitive pricing structure with combo options provides excellent value for money, especially for those who want to experiment with multiple flavors. This brand is perfect for traditional coffee lovers who want premium flavor experiences without compromising on authenticity or variety.</p>
+                    </div>
+                    <div class="consideration-card">
+                        <h3>Choose Impulse Coffees if...</h3>
+                        <p>You're drawn to creator-led brands with strong visual identity and modern aesthetics. Impulse Coffees excels in delivering a premium, stylish experience with its distinctive packaging and curated flavor selection. The brand's freeze-dried instant coffee format is perfect for those who prioritize convenience without sacrificing quality. With six well-crafted flavors including unique options like Rage Roast and Cinnamon Drama, plus regular limited edition drops, it appeals to trend-conscious consumers who enjoy exclusive releases. The brand's strong social media presence and loyal community make it an excellent choice for those who value brand storytelling and want to be part of a coffee culture movement, even at a slightly higher price point.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- What Makes Us Different Section -->
+        <section class="differentiator-section">
+            <div class="container">
+                <div class="differentiator-content">
+                    <h2 class="section-title">What Makes The Wandering Bean Different</h2>
+                    <p>At The Wandering Bean, we believe that exceptional coffee should be accessible in every format you love. Unlike brands that limit themselves to a single product type, we've built our reputation on offering true versatility—instant coffee for busy mornings, ground coffee for pour-over enthusiasts, and whole beans for those who demand absolute freshness. Our extensive collection of 19+ handcrafted flavors represents the largest selection in the Indian gourmet coffee market, each meticulously developed to deliver authentic taste profiles without artificial aftertaste. From our signature Filter Kaapi that brings South Indian coffee culture to your cup in seconds, to adventurous blends like Peanut Butter Coffee and Berrylicious Blueberry, we're constantly innovating while respecting traditional coffee craftsmanship. Our competitive pricing structure and combo options make premium coffee experiences affordable for daily enjoyment, not just special occasions. We're committed to serving the diverse Indian coffee community—whether you're a flavor explorer, a brewing purist, or someone who just wants a delicious cup without the fuss.</p>
+                    <ul class="features-list">
+                        <li>
+                            <svg class="icon check-icon" role="img" aria-label="Feature" fill="none" stroke="currentColor" viewBox="0 0 24 24" width="24" height="24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 13l4 4L19 7"></path></svg>
+                            <span>Multiple coffee formats (instant, ground, whole beans) for every brewing preference</span>
+                        </li>
+                        <li>
+                            <svg class="icon check-icon" role="img" aria-label="Feature" fill="none" stroke="currentColor" viewBox="0 0 24 24" width="24" height="24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 13l4 4L19 7"></path></svg>
+                            <span>19+ unique flavors—the widest selection in Indian gourmet instant coffee</span>
+                        </li>
+                        <li>
+                            <svg class="icon check-icon" role="img" aria-label="Feature" fill="none" stroke="currentColor" viewBox="0 0 24 24" width="24" height="24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 13l4 4L19 7"></path></svg>
+                            <span>Affordable combo options for maximum value and flavor exploration</span>
+                        </li>
+                        <li>
+                            <svg class="icon check-icon" role="img" aria-label="Feature" fill="none" stroke="currentColor" viewBox="0 0 24 24" width="24" height="24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 13l4 4L19 7"></path></svg>
+                            <span>Pan-India shipping with consistent quality and customer service</span>
+                        </li>
+                    </ul>
+                    <div class="cta-wrapper">
+                        <a href="#collection_grid" class="cta-large">Start Your Flavor Journey</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Collection Injection Placeholder -->
+        <!-- COLLECTION_INJECTION_PLACEHOLDER -->
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 The Wandering Bean. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script>
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+        
+        // Observe all sections
+        document.querySelectorAll('.hero, .comparison-section, .consideration-section, .differentiator-section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
