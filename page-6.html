@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover how a breakthrough AI-developed treatment is helping thousands achieve thicker, fuller hair in just 45 days—with only 9 seconds of daily effort.">
+    <title>The 9-Second Hair Revival Method That's Changing Lives in 2025</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* Palette */
+            --palette-primary: #213969;
+            --palette-secondary: #d7d7d7;
+            --palette-accent: #1a425d;
+            --palette-neutral-100: #ffffff;
+            --palette-neutral-200: #f0f2f5;
+            --palette-neutral-900: #222222;
+            --palette-background-page: #ffffff;
+            --palette-background-surface: #f0f2f5;
+            --palette-background-hero-accent: #1a425d;
+            --palette-foreground-body: #222222;
+            --palette-foreground-heading: #222222;
+            --palette-badge-text: #ffffff;
+            --palette-badge-background: #213969;
+            --palette-button-text: #ffffff;
+            --palette-button-background: #213969;
+            --palette-button-hover: #1a425d;
+
+            /* Typography */
+            --typography-family-body: 'Montserrat', 'Arial', sans-serif;
+            --typography-family-heading: 'Montserrat', 'Arial', sans-serif;
+            --typography-size-base: 1.25rem;
+            --typography-size-h1: 2.8rem;
+            --typography-size-h2: 2rem;
+            --typography-size-h3: 1.5rem;
+            --typography-size-body: 1.1rem;
+            --typography-weight-regular: 400;
+            --typography-weight-medium: 500;
+            --typography-weight-bold: 700;
+            --typography-line-height-body: 1.6;
+            --typography-line-height-heading: 1.2;
+
+            /* Layout */
+            --layout-spacing-xs: 0.5rem;
+            --layout-spacing-sm: 1rem;
+            --layout-spacing-md: 2rem;
+            --layout-spacing-lg: 4rem;
+            --layout-container-max-width: 1200px;
+            --layout-container-padding: 2rem;
+
+            /* Effects */
+            --effects-border-radius-sm: 4px;
+            --effects-border-radius-md: 8px;
+            --effects-border-radius-full: 9999px;
+            --effects-box-shadow-sm: 0 1px 2px 0 rgba(33, 57, 105, 0.05);
+            --effects-box-shadow-md: 0 4px 6px -1px rgba(33, 57, 105, 0.1), 0 2px 4px -1px rgba(33, 57, 105, 0.06);
+            --effects-transition-duration: 200ms;
+            --effects-transition-timing: ease-in-out;
+
+            /* Semantic */
+            --color-text-body: var(--palette-foreground-body);
+            --color-text-heading: var(--palette-foreground-heading);
+            --color-brand-primary: var(--palette-primary);
+            --color-brand-secondary: var(--palette-secondary);
+            --color-border-default: rgba(33, 57, 105, 0.12);
+            --color-background-page: var(--palette-background-page);
+            --color-background-surface: var(--palette-background-surface);
+            --color-interactive-accent: var(--palette-accent);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--typography-family-body);
+            font-size: var(--typography-size-body);
+            line-height: var(--typography-line-height-body);
+            color: var(--color-text-body);
+            background-color: var(--color-background-page);
+            font-weight: var(--typography-weight-regular);
+        }
+
+        h1, h2, h3 {
+            font-family: var(--typography-family-heading);
+            font-weight: var(--typography-weight-bold);
+            line-height: var(--typography-line-height-heading);
+            color: var(--color-text-heading);
+            margin-bottom: var(--layout-spacing-md);
+        }
+
+        h1 {
+            font-size: clamp(2rem, 5vw, var(--typography-size-h1));
+        }
+
+        h2 {
+            font-size: clamp(1.5rem, 4vw, var(--typography-size-h2));
+        }
+
+        h3 {
+            font-size: clamp(1.25rem, 3vw, var(--typography-size-h3));
+        }
+
+        p {
+            margin-bottom: var(--layout-spacing-sm);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Navigation */
+        .nav {
+            position: sticky;
+            top: 0;
+            background-color: var(--palette-neutral-100);
+            border-bottom: 1px solid var(--color-border-default);
+            padding: var(--layout-spacing-sm) 0;
+            z-index: 1000;
+            box-shadow: var(--effects-box-shadow-sm);
+        }
+
+        .nav-container {
+            max-width: var(--layout-container-max-width);
+            margin: 0 auto;
+            padding: 0 var(--layout-container-padding);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav-logo {
+            height: 40px;
+            width: auto;
+        }
+
+        .nav-cta {
+            display: none;
+        }
+
+        @media (min-width: 768px) {
+            .nav-cta {
+                display: block;
+            }
+        }
+
+        /* Container */
+        .container {
+            max-width: var(--layout-container-max-width);
+            margin: 0 auto;
+            padding: 0 var(--layout-container-padding);
+        }
+
+        /* Main */
+        main {
+            padding: var(--layout-spacing-lg) 0;
+        }
+
+        /* Article */
+        .article-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            text-align: center;
+            margin-bottom: var(--layout-spacing-lg);
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: var(--palette-badge-background);
+            color: var(--palette-badge-text);
+            padding: var(--layout-spacing-xs) var(--layout-spacing-sm);
+            border-radius: var(--effects-border-radius-full);
+            font-size: 0.9rem;
+            font-weight: var(--typography-weight-medium);
+            margin-bottom: var(--layout-spacing-sm);
+        }
+
+        .hero-headline {
+            margin-bottom: var(--layout-spacing-md);
+            color: var(--color-text-heading);
+        }
+
+        .hero-subheadline {
+            font-size: 1.25rem;
+            color: var(--palette-neutral-900);
+            margin-bottom: var(--layout-spacing-md);
+            font-weight: var(--typography-weight-regular);
+        }
+
+        /* Editorial Content */
+        .editorial-section {
+            margin-bottom: var(--layout-spacing-lg);
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s var(--effects-transition-timing), 
+                        transform 0.6s var(--effects-transition-timing);
+        }
+
+        .editorial-section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .editorial-section-header {
+            display: flex;
+            align-items: center;
+            gap: var(--layout-spacing-sm);
+            margin-bottom: var(--layout-spacing-md);
+        }
+
+        .editorial-section-icon {
+            width: 32px;
+            height: 32px;
+            color: var(--color-brand-primary);
+            flex-shrink: 0;
+        }
+
+        .editorial-media {
+            margin: var(--layout-spacing-md) 0;
+            border-radius: var(--effects-border-radius-md);
+            overflow: hidden;
+            box-shadow: var(--effects-box-shadow-md);
+        }
+
+        .editorial-media img,
+        .editorial-media video {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            display: block;
+        }
+
+        .editorial-media video {
+            max-height: 600px;
+        }
+
+        /* Fact Box */
+        .fact-box {
+            background: var(--color-background-surface);
+            border-left: 4px solid var(--color-brand-primary);
+            padding: var(--layout-spacing-md);
+            margin: var(--layout-spacing-md) 0;
+            border-radius: var(--effects-border-radius-md);
+        }
+
+        .fact-box-title {
+            font-size: 1.25rem;
+            font-weight: var(--typography-weight-bold);
+            color: var(--color-brand-primary);
+            margin-bottom: var(--layout-spacing-sm);
+        }
+
+        .fact-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .fact-list li {
+            padding: var(--layout-spacing-xs) 0;
+            display: flex;
+            align-items: flex-start;
+            gap: var(--layout-spacing-xs);
+        }
+
+        .fact-list li::before {
+            content: "✓";
+            color: var(--color-brand-primary);
+            font-weight: var(--typography-weight-bold);
+            flex-shrink: 0;
+        }
+
+        /* Pull Quote */
+        .pull-quote {
+            background: var(--palette-neutral-100);
+            border-left: 4px solid var(--color-interactive-accent);
+            padding: var(--layout-spacing-md);
+            margin: var(--layout-spacing-md) 0;
+            font-style: italic;
+            font-size: 1.15rem;
+            color: var(--palette-neutral-900);
+        }
+
+        .pull-quote-text {
+            margin-bottom: var(--layout-spacing-sm);
+        }
+
+        .pull-quote-author {
+            font-style: normal;
+            font-weight: var(--typography-weight-medium);
+            color: var(--color-brand-primary);
+            font-size: 0.95rem;
+        }
+
+        /* CTA Button */
+        .cta-button {
+            display: inline-block;
+            background: var(--palette-button-background);
+            color: var(--palette-button-text);
+            padding: var(--layout-spacing-sm) var(--layout-spacing-md);
+            border: none;
+            border-radius: var(--effects-border-radius-md);
+            font-family: var(--typography-family-heading);
+            font-size: 1.1rem;
+            font-weight: var(--typography-weight-bold);
+            cursor: pointer;
+            transition: background var(--effects-transition-duration) var(--effects-transition-timing),
+                        transform var(--effects-transition-duration) var(--effects-transition-timing);
+            box-shadow: var(--effects-box-shadow-md);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .cta-button:hover,
+        .cta-button:focus {
+            background: var(--palette-button-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px -2px rgba(33, 57, 105, 0.15);
+        }
+
+        .cta-button:focus {
+            outline: 3px solid var(--color-brand-primary);
+            outline-offset: 3px;
+        }
+
+        .cta-button:active {
+            transform: translateY(0);
+        }
+
+        .cta-container {
+            text-align: center;
+            margin: var(--layout-spacing-lg) 0;
+        }
+
+        /* Ingredients Grid */
+        .ingredients-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--layout-spacing-md);
+            margin: var(--layout-spacing-md) 0;
+        }
+
+        @media (min-width: 768px) {
+            .ingredients-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .ingredient-card {
+            background: var(--color-background-surface);
+            padding: var(--layout-spacing-md);
+            border-radius: var(--effects-border-radius-md);
+            border: 1px solid var(--color-border-default);
+        }
+
+        .ingredient-name {
+            font-weight: var(--typography-weight-bold);
+            color: var(--color-brand-primary);
+            margin-bottom: var(--layout-spacing-xs);
+        }
+
+        .ingredient-description {
+            font-size: 0.95rem;
+            margin-bottom: 0;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--palette-neutral-200);
+            padding: var(--layout-spacing-md) 0;
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--palette-neutral-900);
+        }
+
+        /* Accessibility */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
+        }
+
+        /* Reduced Motion */
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+
+            .editorial-section {
+                opacity: 1;
+                transform: none;
+            }
+        }
+
+        /* Responsive Typography */
+        @media (max-width: 640px) {
+            :root {
+                --typography-size-body: 1rem;
+                --layout-container-padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav" role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <img src="https://bosleymd.com/cdn/shop/files/BosleyMD_new-Logo_x180@2x.png?v=1614892553" alt="BosleyMD" class="nav-logo" loading="eager">
+            <button class="cta-button nav-cta open_modal" aria-label="Shop the Revive+ treatment now">Shop Now</button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            <article class="article-container">
+                <!-- Hero Section -->
+                <section class="hero-section">
+                    <div class="hero-badge">Health & Wellness</div>
+                    <h1 class="hero-headline">The 9-Second Hair Revival Method That's Helping Thousands Fight Thinning Hair</h1>
+                    <p class="hero-subheadline">Breakthrough AI-developed treatment shows visible results in just 45 days—with only seconds of daily effort</p>
+                </section>
+
+                <!-- Introduction -->
+                <section class="editorial-section">
+                    <div class="editorial-section-header">
+                        <svg class="editorial-section-icon" role="img" aria-label="Discovery icon" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z" />
+                        </svg>
+                        <h2>The Problem Everyone's Talking About</h2>
+                    </div>
+                    <p>For millions dealing with thinning hair, the daily struggle is deeply personal. Each morning brings the same disheartening ritual—noticing more hair on the pillow, watching strands accumulate in the shower drain, feeling self-conscious about increasingly visible scalp areas. Traditional solutions often promise much but deliver little, requiring complex routines, messy applications, or expensive procedures that many simply cannot afford or commit to long-term.</p>
+                    <p>The hair care industry has long been plagued by products that either demand excessive time commitments or fail to address the root biological causes of hair thinning. Men and women alike have been left searching for an effective solution that fits seamlessly into their busy lives while delivering genuine, visible results.</p>
+                    <div class="cta-container">
+                        <button class="cta-button open_modal">Shop Now</button>
+                    </div>
+                </section>
+
+                <!-- Inciting Incident -->
+                <section class="editorial-section">
+                    <div class="editorial-section-header">
+                        <svg class="editorial-section-icon" role="img" aria-label="Innovation icon" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0112 15a9.065 9.065 0 00-6.23-.693L5 14.5m14.8.8l1.402 1.402c1.232 1.232.65 3.318-1.067 3.611A48.309 48.309 0 0112 21c-2.773 0-5.491-.235-8.135-.687-1.718-.293-2.3-2.379-1.067-3.61L5 14.5" />
+                        </svg>
+                        <h2>When Medicine Met Artificial Intelligence</h2>
+                    </div>
+                    <p>The breakthrough came from an unexpected collaboration. Bosley, a name trusted in hair restoration for decades, partnered with Yuva Biosciences and employed cutting-edge artificial intelligence to solve what had long been considered an intractable problem. Their mission was ambitious: use AI to analyze thousands of botanical compounds and identify the precise molecular structure needed to address hair thinning at its biological foundation.</p>
+                    <div class="editorial-media">
+                        <video controls poster loading="lazy" aria-label="9-second hair treatment demonstration video">
+                            <source src="https://is.intelliassist.co/fbadscreativestorage/video_120227481768790202_1756821885575.mp4" type="video/mp4">
+                            Your browser does not support the video element.
+                        </video>
+                    </div>
+                    <p>After processing vast datasets and running countless simulations, the AI identified a remarkable compound from the Amla plant—now branded as the proprietary Y100™ formula. This discovery represented a fundamental shift in approach: rather than merely treating symptoms, this compound targets mitochondrial function within hair follicles, effectively extending the natural hair growth cycle and preventing future thinning.</p>
+                </section>
+
+                <!-- The Challenge -->
+                <section class="editorial-section">
+                    <div class="editorial-section-header">
+                        <svg class="editorial-section-icon" role="img" aria-label="Challenge icon" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z" />
+                        </svg>
+                        <h2>Understanding the Root Cause</h2>
+                    </div>
+                    <p>Hair thinning is not simply a cosmetic concern—it's a biological process rooted in cellular energy depletion. Hair follicles contain mitochondria, the powerhouses of cells, which require consistent energy to maintain the anagen (growth) phase of the hair cycle. As we age or encounter stress, hormonal changes, and environmental factors, mitochondrial function declines, shortening the growth phase and prolonging the resting phase, leading to progressively thinner hair.</p>
+                    <div class="fact-box">
+                        <div class="fact-box-title">The Science Behind Hair Thinning</div>
+                        <p>Traditional treatments have approached this problem superficially, focusing on temporary volumizing or masking symptoms rather than addressing mitochondrial health. The challenge was clear: develop a formula that could penetrate deeply, restore cellular energy, and fundamentally alter the hair growth cycle—all while remaining safe, non-invasive, and simple to use.</p>
+                    </div>
+                    <p>This is where years of research and AI-powered analysis converged. The goal was not just another topical treatment, but a scientifically validated solution that could deliver measurable, lasting results without demanding significant lifestyle changes or invasive procedures.</p>
+                </section>
+
+                <!-- The Breakthrough -->
+                <section class="editorial-section">
+                    <div class="editorial-section-header">
+                        <svg class="editorial-section-icon" role="img" aria-label="Solution icon" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z" />
+                        </svg>
+                        <h2>The Revive+ Solution: Science in 9 Seconds</h2>
+                    </div>
+                    <p>The result of this intensive research is MEN'S REVIVE+ Densifying Treatment Foam—a lightweight, fast-absorbing formula designed for maximum efficacy with minimal effort. The application takes just 9 seconds: apply the foam directly to the scalp, massage into thinning areas, and let it absorb. No rinsing required, no greasy residue, no complicated multi-step routine.</p>
+                    <div class="editorial-media">
+                        <img src="https://cdn.shopify.com/s/files/1/0295/1898/7343/files/Men_sTile1.jpg?v=1705087846" alt="BosleyMD Revive+ Densifying Treatment Foam product" loading="lazy">
+                    </div>
+                    <p>At the heart of Revive+ is the proprietary Y100™ compound, sourced from the Amla plant and identified through AI analysis. This 100% botanical compound enhances mitochondrial function, delivering increased cellular energy to hair follicles and effectively extending the natural hair growth cycle. Supporting this breakthrough ingredient is a carefully formulated blend including Biotin for hair strength, Hyaluronic Acid for moisture retention, and Shatavari for its anti-inflammatory properties.</p>
+                    <div class="fact-box">
+                        <div class="fact-box-title">Clinical Results After 45 Days</div>
+                        <ul class="fact-list">
+                            <li>88% felt hair appeared healthier and stronger</li>
+                            <li>83% saw thicker, fuller hair</li>
+                            <li>83% noticed hair regrowth</li>
+                            <li>77% noticed NEW hair growth</li>
+                            <li>77% experienced less hair shedding</li>
+                        </ul>
+                    </div>
+                    <p>The product is formulated without silicone, phosphate, sulfate, gluten, or aldehyde, and is paraben-free, cruelty-free, vegan, and color-safe. This commitment to clean, ethical formulation ensures that users can feel confident in what they're applying to their scalp daily.</p>
+                    <div class="cta-container">
+                        <button class="cta-button open_modal">Shop Now</button>
+                    </div>
+                </section>
+
+                <!-- Key Ingredients -->
+                <section class="editorial-section">
+                    <div class="editorial-section-header">
+                        <svg class="editorial-section-icon" role="img" aria-label="Ingredients icon" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0112 15a9.065 9.065 0 00-6.23-.693L5 14.5m14.8.8l1.402 1.402c1.232 1.232.65 3.318-1.067 3.611A48.309 48.309 0 0112 21c-2.773 0-5.491-.235-8.135-.687-1.718-.293-2.3-2.379-1.067-3.61L5 14.5" />
+                        </svg>
+                        <h2>Powerful Ingredients, Proven Results</h2>
+                    </div>
+                    <div class="editorial-media">
+                        <img src="https://cdn.shopify.com/s/files/1/0295/1898/7343/files/Men_sTile4.jpg?v=1705087844" alt="Key ingredients in Revive+ formula" loading="lazy">
+                    </div>
+                    <div class="ingredients-grid">
+                        <div class="ingredient-card">
+                            <div class="ingredient-name">Proprietary Y100™ Compound</div>
+                            <p class="ingredient-description">A 100% botanical compound sourced from the Amla plant that enhances mitochondrial function, delivering increased energy to hair follicles and extending the natural hair growth cycle.</p>
+                        </div>
+                        <div class="ingredient-card">
+                            <div class="ingredient-name">Biotin</div>
+                            <p class="ingredient-description">Contributes to the overall strength and resilience of hair, supporting healthier, more robust hair strands.</p>
+                        </div>
+                        <div class="ingredient-card">
+                            <div class="ingredient-name">Hyaluronic Acid</div>
+                            <p class="ingredient-description">Improves moisture retention, making the hair strands and scalp feel more moisturized and hydrated.</p>
+                        </div>
+                        <div class="ingredient-card">
+                            <div class="ingredient-name">Shatavari</div>
+                            <p class="ingredient-description">Believed to have anti-inflammatory properties that benefit the scalp, creating an optimal environment for hair growth.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- The Transformation -->
+                <section class="editorial-section">
+                    <div class="editorial-section-header">
+                        <svg class="editorial-section-icon" role="img" aria-label="Transformation icon" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.493 4.493 0 004.306-1.758M16.5 9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z" />
+                        </svg>
+                        <h2>Real Results, Real Lives Changed</h2>
+                    </div>
+                    <p>The true measure of any treatment lies not in laboratory data alone, but in the lived experiences of those who use it. Clinical trials demonstrated impressive statistics, but the personal testimonials reveal the profound impact Revive+ has had on confidence, self-image, and daily life.</p>
+                    <div class="editorial-media">
+                        <img src="https://cdn.shopify.com/s/files/1/0295/1898/7343/files/Men_sTile2.jpg?v=1705087845" alt="Before and after results showing thicker hair" loading="lazy">
+                    </div>
+                    <div class="pull-quote">
+                        <p class="pull-quote-text">"After just 45 days, I noticed my hair looked thicker and healthier. The thinning areas on my crown started filling in, and I stopped finding as much hair in the shower. It's become as routine as brushing my teeth—just 9 seconds twice a day."</p>
+                        <div class="pull-quote-author">— Clinical Study Participant</div>
+                    </div>
+                    <p>Users report that the integration of Revive+ into their daily routine is effortless. The foam texture allows for precise application directly to areas of concern, and the lightweight, fast-absorbing formula leaves no residue, making it compatible with other grooming products and hairstyling. There's no waiting period, no need to plan showers around application times—just a quick morning and evening application that fits seamlessly into existing routines.</p>
+                    <div class="editorial-media">
+                        <img src="https://cdn.shopify.com/s/files/1/0295/1898/7343/files/Men_sTile3.jpg?v=1705087845" alt="Easy foam application process" loading="lazy">
+                    </div>
+                    <p>Beyond the physical transformation, many users describe a renewed sense of confidence. The psychological burden of hair thinning—the constant worry, the avoidance of mirrors, the reluctance to be photographed—begins to lift as visible results emerge. This is not just about hair; it's about reclaiming a sense of self and feeling comfortable in one's own appearance again.</p>
+                    <div class="cta-container">
+                        <button class="cta-button open_modal">Shop Now</button>
+                    </div>
+                </section>
+
+                <!-- How to Use -->
+                <section class="editorial-section">
+                    <div class="editorial-section-header">
+                        <svg class="editorial-section-icon" role="img" aria-label="Instructions icon" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z" />
+                        </svg>
+                        <h2>Simple Application, Powerful Results</h2>
+                    </div>
+                    <p>The beauty of Revive+ lies in its simplicity. The easy-to-use foam application allows for precise delivery exactly where needed. Apply the foam treatment twice daily to areas of concern or thinning. Dispense a small amount of foam, apply directly to the scalp, massage gently into the targeted areas, and let it absorb. No rinsing, no mess, no complicated steps—just consistent, effortless application that delivers clinical-grade results.</p>
+                    <div class="editorial-media">
+                        <img src="https://cdn.shopify.com/s/files/1/0295/1898/7343/files/prod-clear-cream.jpg?v=1596560398" alt="Step-by-step application guide" loading="lazy">
+                    </div>
+                    <p>For optimal results, consistency is key. The clinical study participants who saw the most dramatic improvements were those who maintained the twice-daily application routine over the 45-day period. The formulation is designed to work progressively, with cumulative effects that become increasingly visible over time.</p>
+                </section>
+
+                <!-- Final CTA Section -->
+                <section class="editorial-section">
+                    <div class="editorial-section-header">
+                        <svg class="editorial-section-icon" role="img" aria-label="Action icon" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                        </svg>
+                        <h2>Take Control of Your Hair Health</h2>
+                    </div>
+                    <p>The convergence of medical expertise, botanical science, and artificial intelligence has created a solution that addresses hair thinning at its biological root. For those tired of ineffective products and complicated regimens, Revive+ offers a refreshingly simple, scientifically validated path forward. In just 9 seconds twice a day, it's possible to take meaningful action against thinning hair and work toward the thicker, fuller appearance that clinical studies have demonstrated.</p>
+                    <div class="editorial-media">
+                        <img src="https://cdn.shopify.com/s/files/1/0295/1898/7343/files/Men_sTile5.jpg?v=1705087845" alt="Complete Revive+ product line" loading="lazy">
+                    </div>
+                    <p>The question is no longer whether effective treatment exists—clinical results have proven that it does. The question is whether to take that first step toward reclaiming confidence and addressing hair thinning with a solution backed by science, trusted by medical professionals, and validated by real user experiences.</p>
+                    <div class="cta-container">
+                        <button class="cta-button open_modal">Shop Now</button>
+                    </div>
+                </section>
+
+            </article>
+        </div>
+
+        <!-- Product Injection Placeholder -->
+        <!-- PRODUCT_INJECTION_PLACEHOLDER -->
+
+    </main>
+
+    <!-- Footer -->
+    <footer role="contentinfo">
+        <div class="container">
+            <p>&copy; 2025 BosleyMD. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scroll Reveal Script -->
+    <script>
+        // Intersection Observer for scroll reveal animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.classList.add('is-visible');
+                    }, index * 100);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        // Observe all editorial sections
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('.editorial-section');
+            sections.forEach(section => observer.observe(section));
+        });
+
+        // Enhanced keyboard navigation for buttons
+        document.querySelectorAll('.cta-button').forEach(button => {
+            button.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    button.click();
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Break the Hair Loss-Stress Cycle with BosleyMD's advanced TRI-BOND Technology. Transform thinning hair into fuller, stronger strands.">
+    <title>✨ Break the Hair Loss–Stress Cycle | BosleyMD</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* Color Palette */
+            --primary-color: #213969;
+            --primary-hover-color: #1a2d52;
+            --secondary-color: #d7d7d7;
+            --accent-color: #1a425d;
+            --accent-hover-color: #0f2a3a;
+            --heading-color: #222222;
+            --text-color: #222222;
+            --text-color-light: #666666;
+            --background-color: #ffffff;
+            --surface-color: #f0f2f5;
+            --border-color: rgba(33, 57, 105, 0.12);
+            --success-color: #22c55e;
+            --error-color: #ef4444;
+            --warning-color: #f59e0b;
+            
+            /* Typography */
+            --font-primary: 'Montserrat', 'Arial', sans-serif;
+            --font-secondary: 'Montserrat', 'Arial', sans-serif;
+            --base-font-size: 16px;
+            --font-weight-normal: 400;
+            --font-weight-medium: 500;
+            --font-weight-bold: 700;
+            --line-height-base: 1.6;
+            --line-height-heading: 1.2;
+            --h1-font-size: 2.8rem;
+            --h2-font-size: 2rem;
+            --h3-font-size: 1.5rem;
+            --h4-font-size: 1.25rem;
+            --h5-font-size: 1.1rem;
+            --h6-font-size: 1rem;
+            
+            /* Sizing and Spacing */
+            --header-height: 72px;
+            --container-width: 1200px;
+            --spacing-unit: 8px;
+            --border-radius: 8px;
+            
+            /* Effects and Transitions */
+            --shadow-sm: 0 1px 2px 0 rgba(33, 57, 105, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(33, 57, 105, 0.1), 0 2px 4px -1px rgba(33, 57, 105, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(33, 57, 105, 0.1), 0 4px 6px -2px rgba(33, 57, 105, 0.05);
+            --transition-speed: 200ms;
+            --transition-timing: ease-in-out;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: var(--font-primary);
+            font-size: var(--base-font-size);
+            line-height: var(--line-height-base);
+            color: var(--text-color);
+            background-color: var(--background-color);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        p, .content-text {
+            text-align: justify;
+            margin-bottom: 1rem;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+        
+        /* Header Navigation */
+        .header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background-color: var(--background-color);
+            box-shadow: var(--shadow-sm);
+            height: var(--header-height);
+        }
+        
+        .header-container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 2rem;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .logo {
+            height: 40px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: var(--primary-color);
+            color: #ffffff;
+            font-family: var(--font-primary);
+            font-weight: var(--font-weight-bold);
+            text-decoration: none;
+            border-radius: 9999px;
+            box-shadow: var(--shadow-md);
+            transition: all var(--transition-speed) var(--transition-timing);
+            min-width: 44px;
+            min-height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .cta-button:hover {
+            background: var(--accent-color);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+            color: #ffffff;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+        
+        .hero-container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
+            font-size: clamp(2rem, 5vw, var(--h1-font-size));
+            line-height: var(--line-height-heading);
+            font-weight: var(--font-weight-bold);
+            margin-bottom: 1.5rem;
+        }
+        
+        .hero-intro {
+            font-size: clamp(1rem, 2vw, 1.25rem);
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            text-align: justify;
+        }
+        
+        /* Listicle Section */
+        .listicle {
+            padding: 4rem 2rem;
+            background-color: var(--background-color);
+        }
+        
+        .listicle-container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+        }
+        
+        .list-item {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-bottom: 4rem;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s var(--transition-timing);
+        }
+        
+        .list-item.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        @media (prefers-reduced-motion: reduce) {
+            .list-item {
+                opacity: 1;
+                transform: none;
+                transition: none;
+            }
+        }
+        
+        @media (min-width: 768px) {
+            .list-item:nth-child(even) {
+                grid-template-columns: 1fr 1fr;
+            }
+            
+            .list-item:nth-child(odd) {
+                grid-template-columns: 1fr 1fr;
+            }
+            
+            .list-item:nth-child(odd) .list-item-media {
+                order: 2;
+            }
+        }
+        
+        .list-item-badge {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+            color: #ffffff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: var(--font-weight-bold);
+            margin-bottom: 1rem;
+        }
+        
+        .list-item-content h3 {
+            font-size: var(--h3-font-size);
+            color: var(--heading-color);
+            font-weight: var(--font-weight-bold);
+            margin-bottom: 1rem;
+            line-height: var(--line-height-heading);
+        }
+        
+        .list-item-content p {
+            color: var(--text-color);
+            line-height: var(--line-height-base);
+        }
+        
+        .list-item-media {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--surface-color);
+            border-radius: var(--border-radius);
+            padding: 1rem;
+            min-height: 300px;
+        }
+        
+        .list-item-media img {
+            border-radius: var(--border-radius);
+            width: 100%;
+            height: auto;
+        }
+        
+        /* Conclusion Section */
+        .conclusion {
+            background-color: var(--surface-color);
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+        
+        .conclusion-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .conclusion h2 {
+            font-size: var(--h2-font-size);
+            color: var(--heading-color);
+            margin-bottom: 1.5rem;
+            font-weight: var(--font-weight-bold);
+        }
+        
+        .conclusion p {
+            margin-bottom: 2rem;
+        }
+        
+        /* Collection Placeholder */
+        .collection-placeholder {
+            padding: 4rem 2rem;
+            background-color: var(--background-color);
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            padding: 4rem 2rem;
+            background-color: var(--surface-color);
+        }
+        
+        .testimonials-container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+        }
+        
+        .testimonials h2 {
+            font-size: var(--h2-font-size);
+            color: var(--heading-color);
+            text-align: center;
+            margin-bottom: 3rem;
+            font-weight: var(--font-weight-bold);
+        }
+        
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+        
+        @media (min-width: 768px) {
+            .testimonial-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .testimonial-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        
+        .testimonial-card {
+            background-color: var(--background-color);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .testimonial-card p {
+            font-style: italic;
+            margin-bottom: 1rem;
+            text-align: left;
+        }
+        
+        .testimonial-author {
+            font-weight: var(--font-weight-bold);
+            color: var(--primary-color);
+            text-align: left;
+        }
+        
+        /* How It Works */
+        .how-it-works {
+            padding: 4rem 2rem;
+            background-color: var(--background-color);
+        }
+        
+        .how-it-works-container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+        }
+        
+        .how-it-works h2 {
+            font-size: var(--h2-font-size);
+            color: var(--heading-color);
+            text-align: center;
+            margin-bottom: 3rem;
+            font-weight: var(--font-weight-bold);
+        }
+        
+        .process-steps {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+        
+        @media (min-width: 768px) {
+            .process-steps {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        
+        .step {
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+            color: #ffffff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.75rem;
+            font-weight: var(--font-weight-bold);
+            margin: 0 auto 1rem;
+        }
+        
+        .step h3 {
+            font-size: var(--h4-font-size);
+            color: var(--heading-color);
+            margin-bottom: 0.75rem;
+            font-weight: var(--font-weight-bold);
+        }
+        
+        .step p {
+            text-align: center;
+        }
+        
+        /* Footer */
+        .footer {
+            background-color: var(--primary-color);
+            color: #ffffff;
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        .footer p {
+            margin: 0;
+            text-align: center;
+        }
+        
+        /* Accessibility */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="header" role="banner">
+        <div class="header-container">
+            <img src="https://bosleymd.com/cdn/shop/files/BosleyMD_new-Logo_x180@2x.png?v=1614892553" alt="BosleyMD Logo" class="logo">
+            <a href="#collection_grid" class="cta-button" aria-label="Shop Now">SHOP NOW</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" aria-labelledby="hero-heading">
+        <div class="hero-container">
+            <h1 id="hero-heading">✨ 7 Powerful Reasons to Break the Hair Loss–Stress Cycle Today</h1>
+            <p class="hero-intro">Millions are silently struggling with thinning hair, but the solution is within reach. Hair loss isn't just about appearance—it affects confidence, self-esteem, and daily well-being. The stress of losing hair creates a vicious cycle that only accelerates the problem. BosleyMD's advanced TRI-BOND™ Technology offers a scientifically-backed approach to strengthen roots, nourish strands, and restore visibly fuller, healthier hair. Discover the transformative benefits that have helped thousands reclaim their confidence.</p>
+        </div>
+    </section>
+
+    <!-- Master Listicle Narrative -->
+    <section class="listicle" aria-labelledby="listicle-heading">
+        <div class="listicle-container">
+            <h2 id="listicle-heading" class="sr-only">7 Reasons to Choose BosleyMD</h2>
+            
+            <!-- List Item 1 -->
+            <article class="list-item">
+                <div class="list-item-content">
+                    <div class="list-item-badge" aria-label="Reason 1">1</div>
+                    <h3>Clinically-Proven TRI-BOND™ Technology</h3>
+                    <p class="content-text">BosleyMD's revolutionary TRI-BOND™ Technology is scientifically formulated to strengthen hair from the root level. Unlike traditional treatments, this advanced formula works at the cellular level to reinforce hair structure, resulting in 85% stronger strands after just one use. Clinical studies demonstrate significant improvements in hair thickness, resilience, and overall scalp health. The technology combines natural DHT-blockers like Pumpkin Seed Extract and Saw Palmetto with cutting-edge peptides to create an optimal environment for hair growth and strength.</p>
+                </div>
+                <div class="list-item-media">
+                    <img src="https://is.intelliassist.co/fbadscreativestorage/image_120235150677550202_1756379490189.jpg" alt="TRI-BOND Technology demonstration" loading="eager">
+                </div>
+            </article>
+
+            <!-- List Item 2 -->
+            <article class="list-item">
+                <div class="list-item-content">
+                    <div class="list-item-badge" aria-label="Reason 2">2</div>
+                    <h3>Lightweight, No-Rinse Formula</h3>
+                    <p class="content-text">Experience the convenience of professional-grade hair treatment without the hassle of complicated routines. BosleyMD's leave-in formulations are designed to be lightweight and residue-free, requiring just one simple step each day. The alcohol-free intensive treatment absorbs quickly into the scalp, delivering powerful ingredients directly to hair follicles without weighing down your hair or leaving greasy buildup. This makes it perfect for all hair types and compatible with any styling routine, allowing individuals to maintain their preferred look while treating thinning hair.</p>
+                </div>
+                <div class="list-item-media">
+                    <img src="https://cdn.shopify.com/s/files/1/0295/1898/7343/files/BosleyMD-AmazonTiles-ReviveNCT-Shampoo-03.jpg" alt="Easy application process" loading="lazy">
+                </div>
+            </article>
+
+            <!-- List Item 3 -->
+            <article class="list-item">
+                <div class="list-item-content">
+                    <div class="list-item-badge" aria-label="Reason 3">3</div>
+                    <h3>Comprehensive Scalp Vitality System</h3>
+                    <p class="content-text">Healthy hair starts with a healthy scalp. BosleyMD products are formulated with natural botanical extracts including Rosemary Extract, Sea Kelp, and Apple Stem Cell Extract that work synergistically to reduce inflammation, increase circulation, and create the ideal foundation for hair growth. The sulfate-free shampoos remove DHT buildup from the scalp surface while cleansing away product residue and environmental pollutants. This comprehensive approach addresses the root cause of thinning hair by rejuvenating the scalp environment and stimulating dormant hair follicles to promote stronger, healthier growth.</p>
+                </div>
+                <div class="list-item-media">
+                    <img src="https://cdn.shopify.com/s/files/1/0295/1898/7343/files/BosleyMD-AmazonTiles-ReviveNCT-Conditioner-03.jpg" alt="Scalp health visualization" loading="lazy">
+                </div>
+            </article>
+
+            <!-- List Item 4 -->
+            <article class="list-item">
+                <div class="list-item-content">
+                    <div class="list-item-badge" aria-label="Reason 4">4</div>
+                    <h3>Natural DHT-Blocking Ingredients</h3>
+                    <p class="content-text">Dihydrotestosterone (DHT) is a primary culprit in hair loss, causing follicles to shrink and produce weaker, thinner strands. BosleyMD harnesses the power of nature's most effective DHT-blockers, including Pumpkin Seed Extract, Soy Proteins, and Saw Palmetto. These plant-based ingredients are rich in vitamins, minerals, and essential fatty acids that naturally inhibit DHT production while nourishing the scalp. Unlike harsh chemical alternatives, these botanical extracts provide gentle yet effective protection against hair loss, supporting the body's natural growth cycles and helping to reduce excessive shedding over time.</p>
+                </div>
+                <div class="list-item-media">
+                    <img src="https://cdn.shopify.com/s/files/1/0295/1898/7343/files/BosleyMD-AmazonTiles-ReviveCS-Shampoo-04.jpg" alt="Natural ingredients display" loading="lazy">
+                </div>
+            </article>
+
+            <!-- List Item 5 -->
+            <article class="list-item">
+                <div class="list-item-content">
+                    <div class="list-item-badge" aria-label="Reason 5">5</div>
+                    <h3>Complete 3-Step Strengthening System</h3>
+                    <p class="content-text">BosleyMD offers a complete hair care ecosystem designed for maximum efficacy. The mendXtend Strengthening System features a coordinated three-step process: cleanse with the nourishing shampoo to remove buildup and prepare the scalp, condition with the volumizing formula to strengthen mid-shaft and ends without weighing hair down, and treat with the leave-in thickening treatment to deliver intensive DHT-blocking ingredients directly to roots. Each product is formulated to work synergistically with the others, creating a comprehensive approach that addresses hair loss from multiple angles for optimal results.</p>
+                </div>
+                <div class="list-item-media">
+                    <img src="https://cdn.shopify.com/s/files/1/0295/1898/7343/files/bos-productset.jpg" alt="Complete product system" loading="lazy">
+                </div>
+            </article>
+
+            <!-- List Item 6 -->
+            <article class="list-item">
+                <div class="list-item-content">
+                    <div class="list-item-badge" aria-label="Reason 6">6</div>
+                    <h3>Safe for Color-Treated Hair</h3>
+                    <p class="content-text">Protecting hair investments shouldn't mean sacrificing hair health. All BosleyMD formulations are color-safe, allowing individuals to maintain their preferred hair color while treating thinning and loss. The sulfate-free, gentle cleansers won't strip color or cause premature fading, while nourishing ingredients like Biotin, Panthenol, and Vegetable Proteins help repair damage caused by chemical treatments and environmental stress. Whether hair is highlighted, dyed, or chemically straightened, BosleyMD products provide the strengthening benefits needed without compromising color vibrancy or texture.</p>
+                </div>
+                <div class="list-item-media">
+                    <img src="https://cdn.shopify.com/s/files/1/0295/1898/7343/files/BosleyMD-AmazonTiles-ReviveCS-Conditioner-04.jpg" alt="Color-safe formula benefits" loading="lazy">
+                </div>
+            </article>
+
+            <!-- List Item 7 -->
+            <article class="list-item">
+                <div class="list-item-content">
+                    <div class="list-item-badge" aria-label="Reason 7">7</div>
+                    <h3>Real Results from Real People</h3>
+                    <p class="content-text">Thousands of individuals have transformed their hair and confidence with BosleyMD. User testimonials consistently report visible improvements in hair thickness, reduced shedding, and increased scalp health within weeks of consistent use. The formulations are backed by decades of research from Bosley, a trusted leader in hair restoration with over 45 years of clinical experience. Independent reviews praise the products' effectiveness, ease of use, and noticeable results. Don't just take the company's word—the proof is in the transformations experienced by everyday people who have broken free from the hair loss-stress cycle.</p>
+                </div>
+                <div class="list-item-media">
+                    <img src="https://is.intelliassist.co/fbadscreativestorage/image_120235150677550202_1756379490190.jpg" alt="Customer success stories" loading="lazy">
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Conclusion CTA Section -->
+    <section class="conclusion" aria-labelledby="conclusion-heading">
+        <div class="conclusion-container">
+            <h2 id="conclusion-heading">Take Back Control of Your Hair Journey</h2>
+            <p class="content-text">The cycle of hair loss and stress doesn't have to continue. With BosleyMD's scientifically-formulated products featuring TRI-BOND™ Technology, clinically-proven natural ingredients, and a comprehensive strengthening system, transforming thinning hair into fuller, healthier strands is achievable. For a limited time during Hair Loss Awareness Month, enjoy 25% OFF all products. This is the perfect opportunity to invest in confidence, self-esteem, and the hair that reflects the best version of oneself. Thousands have already started their transformation journey—join them today.</p>
+            <a href="#collection_grid" class="cta-button" aria-label="Shop Now and Save">SHOP NOW - Save 25%</a>
+        </div>
+    </section>
+
+    <!-- Collection Injection Placeholder -->
+    <section class="collection-placeholder">
+        <!-- COLLECTION_INJECTION_PLACEHOLDER -->
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" aria-labelledby="testimonials-heading">
+        <div class="testimonials-container">
+            <h2 id="testimonials-heading">What Our Customers Say</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <p>"After just three weeks of using the BosleyMD system, I noticed significantly less hair in my brush. My hair feels thicker and healthier than it has in years!"</p>
+                    <div class="testimonial-author">— Sarah M., Verified Customer</div>
+                </div>
+                <div class="testimonial-card">
+                    <p>"I was skeptical at first, but the TRI-BOND Technology really works. My scalp feels healthier and my hair has more volume. Finally found something that delivers results."</p>
+                    <div class="testimonial-author">— Michael R., Verified Customer</div>
+                </div>
+                <div class="testimonial-card">
+                    <p>"The best part is how easy it is to use. No complicated routines, no greasy residue. Just visible results and confidence restored. Highly recommend!"</p>
+                    <div class="testimonial-author">— Jennifer K., Verified Customer</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works" aria-labelledby="how-it-works-heading">
+        <div class="how-it-works-container">
+            <h2 id="how-it-works-heading">How It Works</h2>
+            <div class="process-steps">
+                <div class="step">
+                    <div class="step-number" aria-label="Step 1">1</div>
+                    <h3>Cleanse</h3>
+                    <p>Remove DHT buildup and prepare the scalp with our sulfate-free nourishing shampoo.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number" aria-label="Step 2">2</div>
+                    <h3>Strengthen</h3>
+                    <p>Apply volumizing conditioner to nourish and fortify hair strands from root to tip.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number" aria-label="Step 3">3</div>
+                    <h3>Treat</h3>
+                    <p>Finish with leave-in treatment to deliver intensive DHT-blocking ingredients to roots.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <p>&copy; 2025 BosleyMD. All rights reserved.</p>
+    </footer>
+
+    <!-- Scroll Animation Script -->
+    <script>
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all list items
+        document.querySelectorAll('.list-item').forEach(item => {
+            observer.observe(item);
+        });
+    </script>
+</body>
+</html>
